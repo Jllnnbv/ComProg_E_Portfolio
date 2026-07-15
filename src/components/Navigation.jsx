@@ -1,16 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, User, BookOpen, Layers, Award, MessageSquare, FileText } from 'lucide-react';
+import { Home, User, BookOpen, Award } from 'lucide-react';
 
 const Navigation = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: <Home size={20} /> },
     { path: '/profile', label: 'Profile', icon: <User size={20} /> },
     { path: '/overview', label: 'Overview', icon: <BookOpen size={20} /> },
-    { path: '/portfolio', label: 'Portfolio', icon: <Layers size={20} /> },
-    { path: '/certificates', label: 'Certificates', icon: <Award size={20} /> },
-    { path: '/reflections', label: 'Reflections', icon: <MessageSquare size={20} /> },
-    { path: '/resume', label: 'Resume', icon: <FileText size={20} /> },
+    { path: '/hobbies-trainings', label: 'Hobbies & Trainings', icon: <Award size={20} /> },
   ];
 
   return (

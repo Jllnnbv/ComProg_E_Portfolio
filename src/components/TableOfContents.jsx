@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { List, Home, User, BookOpen, Layers, Award, MessageSquare, FileText } from 'lucide-react';
+import { List, Home, User, BookOpen, Award } from 'lucide-react';
 
 const TableOfContents = () => {
   const sections = [
     { id: '/', label: 'Cover Page', icon: <Home size={20} /> },
     { id: '/profile', label: 'Student Profile', icon: <User size={20} /> },
     { id: '/overview', label: 'Course Overview', icon: <BookOpen size={20} /> },
-    { id: '/portfolio', label: 'Laboratory & Activities', icon: <Layers size={20} /> },
-    { id: '/certificates', label: 'Certificates & Trainings', icon: <Award size={20} /> },
-    { id: '/reflections', label: 'Course Reflections', icon: <MessageSquare size={20} /> },
-    { id: '/resume', label: 'Resume', icon: <FileText size={20} /> },
+    { id: '/hobbies-trainings', label: 'Hobbies & Trainings', icon: <Award size={20} /> },
   ];
 
   return (

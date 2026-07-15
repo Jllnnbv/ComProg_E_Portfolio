@@ -3,10 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero';       
 import StudentProfile from './components/StudentProfile';
 import CourseOverview from './components/CourseOverview';
-import Portfolio from './components/Portfolio'; 
-import Certificates from './components/Certificates';
-import Reflections from './components/Reflections';   
-import Resume from './components/Resume';
+import HobbiesAndTrainings from './components/HobbiesAndTrainings';
 import Navigation from './components/Navigation';
 import TableOfContents from './components/TableOfContents';
 import { Analytics } from "@vercel/analytics/react"
@@ -57,10 +54,7 @@ const App = () => {
             } />
             <Route path="/profile" element={<StudentProfile />} />
             <Route path="/overview" element={<CourseOverview />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/certificates" element={<Certificates />} />
-            <Route path="/reflections" element={<Reflections />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/hobbies-trainings" element={<HobbiesAndTrainings />} />
           </Routes>
 
         </div>

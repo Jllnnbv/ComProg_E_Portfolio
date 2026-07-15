@@ -38,19 +38,19 @@ const Hero = () => {
       <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-warm-sand/20 mt-4">
         <div className="space-y-1">
           <p className="text-[10px] text-warm-sand uppercase tracking-widest font-bold opacity-60">Subject</p>
-          <p className="text-crimson-depth font-bold text-xs uppercase">Discrete Structures (MATC604)</p>
+          <p className="text-crimson-depth font-bold text-xs uppercase">Computer Programming (ITC C105)</p>
         </div>
         <div className="space-y-1">
           <p className="text-[10px] text-warm-sand uppercase tracking-widest font-bold opacity-60">Course & Year</p>
-          <p className="text-crimson-depth font-bold text-xs uppercase">BSIT Major in Business Analytics - 1st Year</p>
+          <p className="text-crimson-depth font-bold text-xs uppercase">BSIT - Business Analytics - 1st Year</p>
         </div>
         <div className="space-y-1">
           <p className="text-[10px] text-warm-sand uppercase tracking-widest font-bold opacity-60">Instructor</p>
-          <p className="text-crimson-depth font-bold text-xs uppercase">Prof. Virginia Loyola</p>
+          <p className="text-crimson-depth font-bold text-xs uppercase">Dr. Richard Monreal</p>
         </div>
         <div className="space-y-1">
           <p className="text-[10px] text-warm-sand uppercase tracking-widest font-bold opacity-60">Term & Semester</p>
-          <p className="text-crimson-depth font-bold text-xs uppercase">SY 2025-2026 | 2nd Semester</p>
+          <p className="text-crimson-depth font-bold text-xs uppercase">SY 2026-2027 | 1st Semester</p>
         </div>
       </div>
     </header>
