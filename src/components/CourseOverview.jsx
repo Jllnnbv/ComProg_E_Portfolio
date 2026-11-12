@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Book, GraduationCap, Clock, Code, Calendar, ListChecks, ArrowRight } from 'lucide-react';
+import { Book, GraduationCap, Clock, Code, Calendar, ListChecks } from 'lucide-react';
 
 const CourseOverview = () => {
   const [activeTab, setActiveTab] = useState('prelims');
 
   const courseDetails = [
-    { label: "Course Title", value: "Computer Programming 1", icon: <Code className="text-crimson-depth" size={20} /> },
-    { label: "Course Code", value: "ITC C105 (BA)", icon: <Book className="text-crimson-depth" size={20} /> },
-    { label: "Credit Units", value: "3 Unit Lecture", icon: <GraduationCap className="text-crimson-depth" size={20} /> },
-    { label: "Contact Hours", value: "5 Hours/Week (2h online lecture, 3h lab)", icon: <Clock className="text-crimson-depth" size={20} /> },
-    { label: "Pre-Requisite", value: "None", icon: <ListChecks className="text-crimson-depth" size={20} /> },
-    { label: "Placement", value: "1st Semester, 1st Year Level", icon: <Calendar className="text-crimson-depth" size={20} /> },
+    { label: "Course Title", value: "Computer Programming 1", icon: <Code className="text-clay-charcoal" size={20} /> },
+    { label: "Course Code", value: "ITC C105 (BA)", icon: <Book className="text-clay-charcoal" size={20} /> },
+    { label: "Credit Units", value: "3 Unit Lecture", icon: <GraduationCap className="text-clay-charcoal" size={20} /> },
+    { label: "Contact Hours", value: "5 Hours/Week (2h online lecture, 3h lab)", icon: <Clock className="text-clay-charcoal" size={20} /> },
+    { label: "Pre-Requisite", value: "None", icon: <ListChecks className="text-clay-charcoal" size={20} /> },
+    { label: "Placement", value: "1st Semester, 1st Year Level", icon: <Calendar className="text-clay-charcoal" size={20} /> },
   ];
 
   const syllabusData = {
@@ -97,39 +97,43 @@ const CourseOverview = () => {
   };
 
   return (
-    <section id="overview" className="space-y-8 mt-16">
+    <section id="overview" className="space-y-8 mt-6">
       <div className="text-center space-y-2">
-        <h2 className="font-serif text-3xl text-crimson-depth tracking-wide drop-shadow-md">Course Overview</h2>
-        <p className="text-xs text-warm-sand uppercase tracking-widest font-bold opacity-80">Subject Details & Syllabus Summary</p>
+        <h2 className="font-serif text-3xl font-extrabold text-clay-charcoal tracking-wide">Course Overview</h2>
+        <p className="text-xs text-clay-muted uppercase tracking-widest font-bold">Subject Details & Syllabus Summary</p>
       </div>
 
       <div className="space-y-6">
         {/* Course Description */}
-        <div className="bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-md border border-white/40 p-6 md:p-8 rounded-2xl shadow-xl">
+        <div className="clay-card-sage p-6 md:p-8">
           <div className="flex items-center gap-3 mb-4">
-            <Book className="text-crimson-depth" size={24} />
-            <h3 className="font-serif text-2xl font-bold text-gray-900">Course Description</h3>
+            <div className="w-10 h-10 rounded-2xl clay-tile flex items-center justify-center text-clay-charcoal">
+              <Book size={22} />
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-clay-charcoal">Course Description</h3>
           </div>
-          <p className="text-sm text-gray-700 leading-relaxed font-medium">
+          <p className="text-sm text-clay-charcoal leading-relaxed font-medium">
             This course provides problem solving and computer programming skills for students with no prior experience in the area of programming. Students will use Python, a high-level, object-oriented computer programming language, to learn the fundamentals of computer programming, including how to write, compile, and execute programs. Basic programming-in-the-small abilities and concepts including procedural programming (methods, parameters, return values), basic control structures (sequence, if/else, for loop, while loop), file processing, arrays, and an introduction to defining objects will be covered.
           </p>
         </div>
 
         {/* Key Details Grid */}
-        <div className="bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-md border border-white/40 p-6 md:p-8 rounded-2xl shadow-xl">
+        <div className="clay-card p-6 md:p-8">
           <div className="flex items-center gap-3 mb-6">
-            <ListChecks className="text-crimson-depth" size={24} />
-            <h3 className="font-serif text-2xl font-bold text-gray-900">Course Specifications</h3>
+            <div className="w-10 h-10 rounded-2xl clay-badge-blue flex items-center justify-center text-clay-charcoal">
+              <ListChecks size={22} />
+            </div>
+            <h3 className="font-serif text-2xl font-bold text-clay-charcoal">Course Specifications</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {courseDetails.map((detail, index) => (
-              <div key={index} className="flex items-center gap-4 p-3 bg-white/40 border border-white/30 rounded-xl shadow-sm">
-                <div className="p-2 bg-crimson-depth/10 rounded-full">
+              <div key={index} className="clay-tile flex items-center gap-4 p-4">
+                <div className={`p-2.5 rounded-2xl shrink-0 ${index % 2 === 0 ? 'clay-badge-sage' : 'clay-badge-blue'}`}>
                   {detail.icon}
                 </div>
                 <div>
-                  <p className="text-[10px] text-warm-sand uppercase tracking-widest font-bold opacity-80">{detail.label}</p>
-                  <p className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">{detail.value}</p>
+                  <p className="text-[10px] text-clay-muted uppercase tracking-widest font-bold">{detail.label}</p>
+                  <p className="text-xs sm:text-sm font-bold text-clay-charcoal mt-0.5">{detail.value}</p>
                 </div>
               </div>
             ))}
@@ -137,23 +141,25 @@ const CourseOverview = () => {
         </div>
 
         {/* Interactive Syllabus Timeline */}
-        <div className="bg-gradient-to-br from-white/60 to-white/30 backdrop-blur-md border border-white/40 p-6 md:p-8 rounded-2xl shadow-xl space-y-6">
-          <div className="flex items-center justify-between border-b border-gray-200/50 pb-4 flex-wrap gap-4">
+        <div className="clay-card p-6 md:p-8 space-y-6">
+          <div className="flex items-center justify-between border-b border-clay-muted/15 pb-4 flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <Calendar className="text-crimson-depth" size={24} />
-              <h3 className="font-serif text-2xl font-bold text-gray-900">Syllabus Outline</h3>
+              <div className="w-10 h-10 rounded-2xl clay-badge-sage flex items-center justify-center text-clay-charcoal">
+                <Calendar size={22} />
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-clay-charcoal">Syllabus Outline</h3>
             </div>
             
-            {/* Term Selectors */}
-            <div className="flex gap-2 bg-white/50 p-1 rounded-lg border border-white/40 shadow-inner">
+            {/* Term Selectors — Puffed 3D Clay Pills */}
+            <div className="flex gap-2 clay-inset p-1.5 rounded-full">
               {Object.keys(syllabusData).map((termKey) => (
                 <button
                   key={termKey}
                   onClick={() => setActiveTab(termKey)}
-                  className={`px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+                  className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
                     activeTab === termKey
-                      ? 'bg-crimson-depth text-white shadow-md'
-                      : 'text-gray-600 hover:text-crimson-depth hover:bg-white/40'
+                      ? 'clay-pill-active'
+                      : 'text-clay-muted hover:text-clay-charcoal'
                   }`}
                 >
                   {syllabusData[termKey].title.split(' ')[0]}
@@ -163,20 +169,20 @@ const CourseOverview = () => {
           </div>
 
           {/* Active Term Timeline */}
-          <div className="relative border-l-2 border-crimson-depth/20 ml-2.5 space-y-8 py-2">
+          <div className="relative border-l-2 border-clay-sage ml-3 space-y-6 py-2">
             {syllabusData[activeTab].weeks.map((item, index) => (
-              <div key={index} className="relative pl-8 group">
-                <div className="absolute -left-[6px] top-2.5 w-2.5 h-2.5 rounded-full bg-crimson-depth ring-4 ring-white/50 group-hover:scale-110 transition-transform duration-300"></div>
-                <div className="space-y-1">
+              <div key={index} className="relative pl-7 group">
+                <div className="absolute -left-[7px] top-4 w-3 h-3 rounded-full clay-badge-sage group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="clay-tile p-4 space-y-1.5">
                   <div className="flex items-center gap-2.5 flex-wrap">
-                    <span className="text-[10px] bg-crimson-depth/15 text-crimson-depth font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider shadow-sm">
+                    <span className="text-[10px] clay-badge-blue text-clay-charcoal font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider">
                       {item.week}
                     </span>
-                    <h4 className="font-serif text-base font-bold text-gray-900 group-hover:text-crimson-depth transition-colors duration-300">
+                    <h4 className="font-serif text-base font-bold text-clay-charcoal">
                       {item.title}
                     </h4>
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-medium pt-1">
+                  <p className="text-xs sm:text-sm text-clay-charcoal/90 leading-relaxed font-medium pt-1">
                     {item.details}
                   </p>
                 </div>

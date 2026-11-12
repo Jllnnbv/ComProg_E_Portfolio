@@ -7,14 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-  'crimson-depth': '#641d2bff',  // Stays Red
-  'warm-sand': '#B38F6F',      // Stays Gold
-  'soft-pearl': '#111010ff',     // Was Light, now DARK (The background)
-  'obsidian-black': '#F2F1ED', // Was Dark, now LIGHT (The text)
-},
+        'clay-cream': '#F4EFEA',
+        'clay-sage': '#B5C9C3',
+        'clay-blue': '#A3C4DC',
+        'clay-charcoal': '#2C302E',
+        'clay-muted': '#52635E',
+        // Semantic aliases mapped to the Claymorphic palette
+        'crimson-depth': '#2C302E',
+        'warm-sand': '#52635E',
+        'soft-pearl': '#F4EFEA',
+        'obsidian-black': '#2C302E',
+      },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
       },
     },
   },

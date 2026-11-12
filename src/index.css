@@ -1,8 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F4EFEA;
+    color: #2C302E;
+  }
+}
+
+@layer components {
+  /* Main Portfolio Outer 3D Clay Container (32px radius) */
+  .clay-shell {
+    background: linear-gradient(145deg, #F9F5F1 0%, #EFE8E0 100%);
+    border-radius: 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+      16px 16px 36px rgba(196, 186, 176, 0.65),
+      -12px -12px 30px rgba(255, 255, 255, 0.95),
+      inset 3px 3px 6px rgba(255, 255, 255, 0.9),
+      inset -3px -3px 7px rgba(206, 196, 186, 0.45);
+  }
+
+  /* Floating Top Navigation Pill */
+  .clay-nav-pill {
+    background: linear-gradient(145deg, #FAF6F2 0%, #EDE6DE 100%);
+    border-radius: 9999px;
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    box-shadow:
+      10px 10px 24px rgba(192, 182, 172, 0.6),
+      -8px -8px 20px rgba(255, 255, 255, 0.95),
+      inset 2px 2px 5px rgba(255, 255, 255, 0.95),
+      inset -2px -2px 5px rgba(204, 194, 184, 0.45);
+  }
+
+  /* Raised 3D Clay Card (28px radius) */
+  .clay-card {
+    background: linear-gradient(145deg, #FAF6F2 0%, #EFE8E0 100%);
+    border-radius: 28px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+      10px 10px 22px rgba(198, 188, 178, 0.55),
+      -8px -8px 18px rgba(255, 255, 255, 0.9),
+      inset 2px 2px 5px rgba(255, 255, 255, 0.92),
+      inset -2px -2px 6px rgba(206, 196, 186, 0.4);
+  }
+
+  /* Pastel Sage + Baby Blue 3D Clay Pillow (Welcome Card & Featured Accents) */
+  .clay-card-sage {
+    background: linear-gradient(135deg, #C6D8D3 0%, #B5C9C3 52%, #B4CEE0 100%);
+    border-radius: 28px;
+    border: 1.5px solid rgba(255, 255, 255, 0.78);
+    box-shadow:
+      10px 10px 24px rgba(164, 178, 174, 0.55),
+      -8px -8px 18px rgba(255, 255, 255, 0.9),
+      inset 3px 3px 6px rgba(255, 255, 255, 0.82),
+      inset -3px -3px 7px rgba(132, 156, 150, 0.38);
+  }
+
+  /* Dusty Baby Blue 3D Clay Pillow */
+  .clay-card-blue {
+    background: linear-gradient(145deg, #B8D3E6 0%, #A3C4DC 100%);
+    border-radius: 28px;
+    border: 1.5px solid rgba(255, 255, 255, 0.78);
+    box-shadow:
+      10px 10px 22px rgba(154, 176, 192, 0.5),
+      -8px -8px 18px rgba(255, 255, 255, 0.9),
+      inset 3px 3px 6px rgba(255, 255, 255, 0.85),
+      inset -3px -3px 7px rgba(124, 154, 176, 0.38);
+  }
+
+  /* Individual Raised 24px 3D Clay Tile (Metadata Grid & Sub-items) */
+  .clay-tile {
+    background: linear-gradient(145deg, #FAF7F3 0%, #EDE6DE 100%);
+    border-radius: 24px;
+    border: 1.5px solid rgba(255, 255, 255, 0.88);
+    box-shadow:
+      7px 7px 16px rgba(198, 188, 178, 0.52),
+      -6px -6px 14px rgba(255, 255, 255, 0.92),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.92),
+      inset -2px -2px 4px rgba(206, 196, 186, 0.35);
+  }
+
+  /* Puffed / Inflated 3D Clay Active Pill (#B5C9C3 Sage & #A3C4DC Baby Blue) */
+  .clay-pill-active {
+    background: linear-gradient(135deg, #B5C9C3 0%, #A3C4DC 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    color: #2C302E;
+    box-shadow:
+      5px 5px 12px rgba(160, 176, 172, 0.6),
+      -4px -4px 10px rgba(255, 255, 255, 0.95),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.88),
+      inset -2px -2px 4px rgba(130, 152, 165, 0.35);
+  }
+
+  /* Tactile Sage Clay Badge */
+  .clay-badge-sage {
+    background: linear-gradient(145deg, #C4D6D0 0%, #B5C9C3 100%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #2C302E;
+    box-shadow:
+      4px 4px 9px rgba(182, 174, 166, 0.45),
+      -3px -3px 8px rgba(255, 255, 255, 0.88),
+      inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.85),
+      inset -1.5px -1.5px 3px rgba(142, 164, 158, 0.35);
+  }
+
+  /* Tactile Baby Blue Clay Badge */
+  .clay-badge-blue {
+    background: linear-gradient(145deg, #B6D1E5 0%, #A3C4DC 100%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #2C302E;
+    box-shadow:
+      4px 4px 9px rgba(182, 174, 166, 0.45),
+      -3px -3px 8px rgba(255, 255, 255, 0.88),
+      inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.85),
+      inset -1.5px -1.5px 3px rgba(130, 158, 178, 0.35);
+  }
+
+  /* Recessed Neumorphic Well */
+  .clay-inset {
+    background: #EDE7E0;
+    border-radius: 20px;
+    box-shadow:
+      inset 5px 5px 10px rgba(196, 186, 176, 0.6),
+      inset -5px -5px 10px rgba(255, 255, 255, 0.88);
+  }
+
+  /* Cushioned 3D Clay Ring for Circular Profile Photo */
+  .clay-avatar-ring {
+    background: linear-gradient(145deg, #C2D4CE 0%, #F4EFEA 50%, #A3C4DC 100%);
+    border-radius: 9999px;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow:
+      12px 12px 26px rgba(186, 176, 166, 0.65),
+      -10px -10px 22px rgba(255, 255, 255, 0.96),
+      inset 4px 4px 8px rgba(255, 255, 255, 0.92),
+      inset -4px -4px 8px rgba(145, 165, 175, 0.45);
+  }
+
+  .clay-avatar-inner {
+    border-radius: 9999px;
+    box-shadow:
+      inset 4px 4px 10px rgba(44, 48, 46, 0.25),
+      0 2px 6px rgba(255, 255, 255, 0.85);
+  }
+}
 
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
